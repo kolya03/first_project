@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+{% block title %}Первая страница{% endblock %}
+{% 	load static %}
+{% block content %}
+
+<!--Слайдер-->
+
+<section>
+  		<div id="carouselExampleCaptions" class="carousel slide container" data-ride="carousel">
+		  <div class="carousel-inner">
+			{% for slide in scroll_list %}
+		    <div class="carousel-item {{ slide.css }}">
+		      <img src="{{ slide.img.url }}" class="d-block w-100"  alt="...">
+		      <div class="carousel-caption d-none d-md-block">
+		        <h5 class="slaider_h">{{ slide.title }}</h5>
+		        <p class="slaider_p">{{ slide.text }}</p>
+		      </div>
+		    </div>
+			{% endfor %}
+		  </div>
+		  <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+		    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		    <span class="sr-only">Previous</span>
+		  </a>
+		  <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+		    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+		    <span class="sr-only">Next</span>
+		  </a>
+		</div>
+  	</section>
+
+
+
+
+<!--Пакеты услуг-->
+<!--##############-->
+<!--##############-->
+<!--##############-->
+
+	<section>
+  		<div class="container">
+  			<h1 class="text-3">ПАКЕТЫ УСЛУГ</h1>
+  			<div class="row justify-content-center">
+  				<div class="card product_card" style="width: 18rem; background-color: #cd7f32;">
+				  <div class="card-body">
+				    <h5 class="card-title">BRONZE</h5>
+				    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				    <h3>1000 руб.</h3>
+				  </div>
+				</div>
+				<div class="card product_card" style="width: 18rem; background-color: #c0c0c0;">
+				  <div class="card-body">
+				    <h5 class="card-title">SILVER</h5>
+				    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				    <h3>2000 руб.</h3>
+				  </div>
+				</div>
+				<div class="card product_card" style="width: 18rem; background-color: #ffd700;">
+				  <div class="card-body">
+				    <h5 class="card-title">GOLD</h5>
+				    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				    <h3>5000 руб.</h3>
+				  </div>
+				</div>
+  			</div>
+  		</div>
+  	</section>
+  	<!-- Таблица -->
+  	<section>
+  		<div class="container">
+  			<h1 class="text-3">Цены на услуги</h1>
+  			<table class="table table_one">
+			  <thead class="thead-dark">
+			    <tr>
+			      <th scope="col">Услуга</th>
+			      <th scope="col">Старая цена</th>
+			      <th scope="col">Новая цена</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			  <tr>
+			      <th scope="col">Первая услуга</th>
+				  <th scope="col"><del>10000</del></th>
+			      <th scope="col">1000</th>
+			    </tr>
+			  <tr>
+			      <th scope="col">Вторая услуга</th>
+			      <th scope="col"><del>15000</del></th>
+			      <th scope="col">10000</th>
+			    </tr>
+			  <!--
+			    <tr>
+			      <td>{{ obj.pt_title }}</td>
+			      <td><del>{{ obj.pt_old_price }}</del></td>
+			      <td>{{ obj.pt_new_price }}</td>
+			    </tr>
+			  -->
+			  </tbody>
+			</table>
+  		</div>
+  	</section>
+
+<!--##############-->
+<!--##############-->
+<!--##############-->
+
+
+{% endblock %}
+
