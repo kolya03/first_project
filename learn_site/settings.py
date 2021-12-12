@@ -25,6 +25,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'scroll.apps.ScrollConfig',
+    'price.apps.PriceConfig',
 ]
 
 MIDDLEWARE = [
