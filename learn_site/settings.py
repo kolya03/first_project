@@ -26,6 +26,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'scroll.apps.ScrollConfig',
     'price.apps.PriceConfig',
+    'crm.apps.CrmConfig',
+    'telebot.apps.TelebotConfig',
 ]
 
 MIDDLEWARE = [

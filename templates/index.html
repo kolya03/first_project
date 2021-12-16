@@ -87,6 +87,20 @@
   	</section>
 
 
+<form class="ml-5" action="{% url 'last_page' %}" method="POST">
+	{% csrf_token %}
+  <div class="form-group ml-5">
+    <label for="formGroupExampleInput">Введите имя</label>
+    <input type="text" class="form-control" name="or_name" id="formGroupExampleInput" placeholder="имя...">
+  </div>
+  <div class="form-group">
+    <label for="formGroupExampleInput2">Введите телефон</label>
+    <input type="text" class="form-control"  name="or_phone" id="formGroupExampleInput2" placeholder="телефон...">
+  </div>
+	<button type="submit">GOTOVO</button>
+</form>
+
+
 
 
 
